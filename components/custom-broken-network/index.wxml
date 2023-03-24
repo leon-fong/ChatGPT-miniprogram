@@ -1,0 +1,14 @@
+<!--components/custom-broken-network/index.wxml-->
+<view
+  style="width: {{ verticalCenter ? systemInfo.screenWidth + 'px' : 'auto'}}; height: {{ verticalCenter ? systemInfo.screenHeight + 'px' : 'auto'}};"
+  class="{{verticalCenter ? 'custom-broken-network-vertical-center' : ''}} external-custom-broken-network"
+>
+  <view class="message external-custom-broken-network_message">
+    <text space="nbsp">{{message}}</text>
+  </view>
+  <view class="refresh external-custom-broken-network_refresh">
+    <van-button catchtap="handleRefresh" block square plain type="primary" custom-class="custom-refresh"
+      >{{buttonText}}</van-button
+    >
+  </view>
+</view>

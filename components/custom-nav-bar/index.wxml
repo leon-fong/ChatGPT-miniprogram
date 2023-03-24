@@ -1,0 +1,30 @@
+<!--components/custom-navbar/index.wxml-->
+<view catchtap="handleBackTop" class="custom-nav-bar">
+  <van-nav-bar
+    fixed="{{fixed}}"
+    placeholder="{{placeholder}}"
+    border="{{border}}"
+    custom-style="{{customStyle}}"
+    z-index="{{zIndex}}"
+    title="{{title}}"
+    safe-area-inset-top="{{safeAreaInsetTop}}"
+  >
+    <view slot="left" class="solt-left">
+      <view wx:if="{{showHome}}" catchtap="handleReLaunchHome" class="home">
+        <custom-iconfont icon="icon-home" size="48rpx" />
+      </view>
+      <view wx:if="{{showBack}}" catchtap="handleNavigateBack" class="back">
+        <custom-iconfont icon="icon-leftarrow" size="48rpx" />
+      </view>
+      <view wx:if="{{showClose}}" catchtap="handleNavigateBack" class="close">
+        <custom-iconfont icon="icon-close" size="48rpx" />
+      </view>
+      <view wx:if="{{showSlot}}" class="solt">
+        <slot />
+      </view>
+    </view>
+    <view slot="title" class="solt-title ^van-ellipsis">
+      <slot name="title" />
+    </view>
+  </van-nav-bar>
+</view>

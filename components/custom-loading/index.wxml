@@ -1,0 +1,18 @@
+<!--components/custom-loading/custom-loading.wxml-->
+<view
+  wx:if="{{loading}}"
+  catchtouchmove="noop"
+  style="width: {{systemInfo.screenWidth}}px; height: {{systemInfo.screenHeight}}px; z-index: {{zIndex}};"
+  class="loading-wrapper"
+>
+  <view class="mask-wrapper">
+    <custom-image
+      src="/assets/images/loading.gif"
+      width="100rpx"
+      height="100rpx"
+      showLoading="{{false}}"
+      class="image"
+    />
+    <text class="loading-text">加载中...</text>
+  </view>
+</view>

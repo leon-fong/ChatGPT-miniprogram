@@ -1,0 +1,22 @@
+<!--components/custom-rich-text/index.wxml-->
+<!-- https://github.com/jin-yufeng/mp-html -->
+<view class="custom-rich-text">
+  <mp-html
+    container-style="{{containerStyle}}"
+    content="{{content}}"
+    copy-link="{{copyLink}}"
+    domain="{{domain}}"
+    error-img="{{errorImg}}"
+    lazy-load="{{lazyLoad}}"
+    loading-img="{{loadingImg}}"
+    pause-video="{{pauseVideo}}"
+    preview-img="{{previewImg}}"
+    scroll-table="{{scrollTable}}"
+    selectable="{{selectable}}"
+    set-title="{{setTitle}}"
+    show-img-menu="{{showImgMenu}}"
+    tag-style="{{tagStyle}}"
+    use-anchor="{{useAnchor}}"
+    markdown="{{isMarkdown}}"
+  />
+</view>

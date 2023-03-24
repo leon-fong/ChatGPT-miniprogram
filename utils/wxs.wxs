@@ -1,0 +1,14 @@
+/**
+ * @method addRpxUnit 添加单位
+ * @param value
+ */
+function addRpxUnit(value) {
+  if (value == null) {
+    return undefined;
+  }
+  return value.constructor === 'Number' ? value * 2 + 'rpx' : value;
+}
+
+module.exports = {
+  addRpxUnit: addRpxUnit,
+};

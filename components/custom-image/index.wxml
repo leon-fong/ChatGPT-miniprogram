@@ -1,0 +1,30 @@
+<!--components/custom-image/index.wxml-->
+<wxs src="/utils/wxs.wxs" module="computed" />
+
+<view
+  bindtap="onClick"
+  style="width: {{computed.addRpxUnit(width)}}; height: {{computed.addRpxUnit(height)}}; border-radius: {{radius ? computed.addRpxUnit(radius) : 0}}; {{customStyle}}"
+  class="custom-image {{round ? 'custom-image--round' : ''}}"
+>
+  <image
+    wx:if="{{ !error }}"
+    src="{{ src }}"
+    mode="{{ mode }}"
+    webp="{{webp}}"
+    lazy-load="{{ lazyLoad }}"
+    class="image-class custom-image__img"
+    show-menu-by-longpress="{{ showMenuByLongpress }}"
+    bind:load="onLoad"
+    bind:error="onError"
+  />
+
+  <view wx:if="{{ loading && showLoading }}" class="loading-class custom-image__loading">
+    <slot wx:if="{{ useLoadingSlot }}" name="loading" />
+    <view wx:else class="custom-image__loading-icon" />
+  </view>
+
+  <view wx:if="{{ error && showError }}" class="error-class custom-image__error">
+    <slot wx:if="{{ useErrorSlot }}" name="error" />
+    <view wx:else class="custom-image__error-icon" />
+  </view>
+</view>

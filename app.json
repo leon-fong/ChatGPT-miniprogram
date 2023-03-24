@@ -1,0 +1,26 @@
+{
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f4f5f5",
+    "navigationBarTitleText": "miniprogram-template",
+    "navigationBarTextStyle": "black"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "resolveAlias": {
+    "~/*": "/*"
+  },
+  "usingComponents": {
+    "custom-broken-network": "/components/custom-broken-network/index",
+    "custom-image": "/components/custom-image/index",
+    "custom-iconfont": "/components/custom-iconfont/index",
+    "custom-rich-text": "/components/custom-rich-text/index",
+    "custom-loading": "/components/custom-loading/index",
+    "custom-virtuali-list": "/components/custom-virtuali-list/index",
+    "custom-more": "/components/custom-more/index",
+    "custom-nomore": "/components/custom-nomore/index"
+  },
+  "sitemapLocation": "sitemap.json",
+  "pages": [
+    "pages/home/index"
+  ]
+}

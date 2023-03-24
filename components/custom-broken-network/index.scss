@@ -1,0 +1,23 @@
+/* components/custom-broken-network/index.wxss */
+.custom-broken-network-vertical-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.refresh {
+  margin-top: 40rpx;
+  .custom-refresh {
+    width: 240rpx;
+  }
+}

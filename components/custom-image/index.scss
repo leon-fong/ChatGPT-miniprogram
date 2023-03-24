@@ -1,0 +1,46 @@
+/* components/custom-image/index.wxss */
+.custom-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.custom-image--round {
+  border-radius: 50% !important;
+}
+.custom-image--round .custom-image__img {
+  border-radius: inherit;
+}
+
+.custom-image__error,
+.custom-image__img,
+.custom-image__loading {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.custom-image__error,
+.custom-image__loading {
+  align-items: center;
+  background-color: #f7f8fa;
+  color: #969799;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.custom-image__loading-icon {
+  color: #dcdee0;
+  font-size: 24rpx;
+}
+
+.custom-image__error-icon {
+  color: #dcdee0;
+  font-size: 24rpx;
+}

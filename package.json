@@ -1,0 +1,44 @@
+{
+  "name": "miniprogram-template",
+  "version": "1.0.0",
+  "author": "Leon<hey@leonfong.me>",
+  "main": "",
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development run-s switch-env miniprogram-ci",
+    "build:prod": "cross-env NODE_ENV=production run-s switch-env miniprogram-ci",
+    "prepare": "husky install && npx husky add .husky/pre-commit 'npx lint-staged'",
+    "prettier": "prettier --write",
+    "prettier-lint": "prettier --write .",
+    "eslint": "eslint --ext .ts,.js",
+    "eslint-lint": "eslint --ext .ts,.js .",
+    "switch-env": "node switch-env.js",
+    "miniprogram-ci": "node miniprogram-ci.js"
+  },
+  "dependencies": {
+	"dayjs": "^1.11.5",
+	"tdesign-miniprogram": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "miniprogram-ci": "^1.8.35",
+    "prettier": "^2.7.1",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run eslint"
+    ],
+    "*.{js,wxs,wxml,wxss,json,scss}": [
+      "npm run prettier"
+    ]
+  },
+  "type": "module"
+}

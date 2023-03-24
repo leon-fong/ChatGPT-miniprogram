@@ -1,0 +1,28 @@
+/* components/custom-loading/index.wxss */
+.loading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  .mask-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 240rpx;
+    height: 240rpx;
+    padding: 32rpx;
+    box-sizing: border-box;
+    background-color: rgba(3, 28, 36, 1);
+    border-radius: 16rpx;
+
+    .loading-text {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!--components/custom-virtuali-list/index.wxml-->
+<view class="custom-virtuali-list">
+  <view
+    wx:for="{{virtualiList2d}}"
+    wx:for-item="otherItem"
+    wx:for-index="otherIndex"
+    wx:key="otherIndex"
+    data-virtual-index="{{otherIndex}}"
+    id="virtuali-list"
+  >
+    <view wx:if="{{wxsModule.includesList(virtualValue, otherIndex)}}" class="list-wrapper external-list-wrapper">
+      <selectable wx:for="{{otherItem}}" wx:key="index" virtualiItem="{{item}}" />
+    </view>
+    <view wx:else style="height: {{virtualHeight[otherIndex]}}px;" />
+  </view>
+</view>
+
+<!-- prettier-ignore -->
+<wxs module="wxsModule">
+	module.exports = {
+		includesList: function (virtualValue, virtualIndex) {
+			if (virtualValue.length) {
+				return virtualValue.indexOf(virtualIndex) !== -1
+			} else {
+				return true
+			}
+		}
+	}
+</wxs>
