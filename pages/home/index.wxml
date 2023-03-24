@@ -1,1 +1,8 @@
-<view>home</view>
+<view class="home">
+    <view class="home__content animate__animated animate__pulse">
+        <image mode="aspectFill"  src="/assets/images/intro.png" alt="LOGO" />
+    </view>
+    <view class="home__footer">
+        <t-button theme="primary" t-class="t-button-footer animate__animated animate__fadeInUp" size="large" block bindtap="toChat">开始使用</t-button>
+    </view>
+</view>

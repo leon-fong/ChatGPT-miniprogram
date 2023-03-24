@@ -1,0 +1,18 @@
+.home{
+	height: 100vh;
+	background-color: #ffd001;
+}
+.home__content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+	border-radius: 20rpx;
+}
+.home__footer{
+	padding: 0 100rpx;
+}
+.t-button-footer{
+	border: 6rpx solid #fff;
+	color: #333;
+}

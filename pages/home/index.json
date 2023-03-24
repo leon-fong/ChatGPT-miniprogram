@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+	"usingComponents": {
+			"t-button": "tdesign-miniprogram/button/button",
+			"t-image": "tdesign-miniprogram/image/image"
+		},
+	"navigationBarTitleText": " ",
+	"navigationBarBackgroundColor": "#ffd001",
+	"disableScroll": true
 }
