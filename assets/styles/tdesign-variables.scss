@@ -1,0 +1,11 @@
+page {
+	--primary-color:#ffd001;
+	--primary-lite-color:#ffeb67;
+	--td-button-primary-bg-color: var(--primary-color);
+	--td-button-primary-border-color: var(--primary-color);
+	--td-button-primary-active-bg-color: #ffeb67;
+	--td-button-primary-active-border-color: #ffeb67;
+	--td-cell-left-icon-color: var(--td-button-primary-bg-color);
+	--td-button-primary-disabled-bg: #ffeb67;
+	--td-button-primary-disabled-border-color: #ffeb67;
+}
