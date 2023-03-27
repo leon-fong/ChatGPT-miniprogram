@@ -1,10 +1,23 @@
-# miniprogram template
+<div align="center">
+  <div>
+  <h1 align="center">ChatGPT 小程序</h1>
+    <img src=".github/intro.png" alt="ChatGPT Miniprogram" width="700"/>
+  </div>
+</div>
+
+
+## 功能
+- AI 内容保存（选择/一键复制）
+- 清空屏幕内容
+- 取消当前对话请求
+- 丰富的 Prompt 列表
+- 回复等待动画
 
 ## 安装
 
 1. 克隆项目
 
-2. 进入项目目录 
+2. 进入项目目录
 
 3. 安装依赖 `yarn install`
 
@@ -12,8 +25,8 @@
 
 ## 配置
 
-1. 设置根域名和 APPID
- > 路径: 
+1. 设置根域名（BaseUrl）和 APPID
+ > 路径:
  > config/development [开发环境]
  > config/production [生产环境]
 
