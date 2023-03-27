@@ -1,0 +1,19 @@
+<!--pages/settings/settings.wxml-->
+<view class="settings">
+	<view class="settings__header">
+		<image mode="widthFix" class="settings__header--logo" src="../../assets/images/logo.png" alt="LOGO" />
+		<text class="settings__header--title">ChatGPT Miniprogram</text>
+	</view>
+	<t-cell-group theme="card" bindtap="handleCellGroupClick">
+		<t-cell title="我要吐槽" leftIcon="tips" data-cell="feedback" hover arrow />
+		<t-cell title="打赏咖啡" leftIcon="heart" data-cell="reward" hover arrow />
+		<t-cell title="开源地址" leftIcon="logo-github-filled" data-cell="github" hover arrow />
+		<button class="btn-clear" open-type="share">
+			<t-cell title="推荐给朋友" leftIcon="share" hover arrow />
+		</button>
+	</t-cell-group>
+	<view class="settings__footer">
+		<text>v2.1.2</text>
+		<text>联系我：hey@leonfong.me</text>
+	</view>
+</view>

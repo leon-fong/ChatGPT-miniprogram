@@ -1,0 +1,41 @@
+.settings__header {
+  padding: 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settings__header--logo {
+  width: 200rpx;
+  border-radius: 50;
+}
+
+.settings__header--title {
+  margin-top: 30rpx;
+  margin-bottom: 60rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+.settings__more {
+  padding: 30rpx;
+}
+
+.settings__footer {
+  position: fixed;
+  bottom: 44rpx;
+  width: 100%;
+  padding-bottom: 40rpx;
+}
+.settings__footer text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.dialog-image {
+  width: 622rpx;
+  height: 600rpx;
+}
