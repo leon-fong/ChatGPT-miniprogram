@@ -1,0 +1,106 @@
+/* components/prompt-item/index.wxss */
+
+.role {
+    border-radius: 30rpx;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 209, 67, 1) 0%, rgba(255, 145, 83, 1) 90%);
+    width: 100%;
+    height: 520rpx;
+    position: relative;
+}
+
+.role__avatar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 70rpx;
+    padding-bottom: 0;
+}
+
+.role__avatar image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+}
+
+.role__title {
+    padding: 22rpx 30rpx;
+    font-size: 52rpx;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.role__footer {
+    color: #fff;
+    border-top: 1rpx solid rgba(255, 255, 255, .4);
+    padding: 30rpx 24rpx;
+    border-radius: 0 0 30rpx 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.role__footer--btn {
+    flex-shrink: 0;
+    width: 174rpx;
+    border-radius: 48px;
+    background-color: #fff;
+    color: #333;
+    font-size: 26rpx;
+}
+
+.role__footer--description {
+    flex: auto;
+    opacity: .7;
+    font-size: 26rpx;
+    padding-right: 40rpx;
+}
+
+.btn-gold {
+    background-image: linear-gradient(109.6deg, rgba(255, 194, 48, 1) 11.2%, rgba(255, 124, 0, 1) 100.2%);
+    color: #fff;
+}
+
+.checked {
+    opacity: .5;
+    color: #999;
+}
+
+.bg-default {
+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.bg-girlfriend {
+    background-image: linear-gradient(89.5deg, rgba(246, 114, 128, 1) 0.2%, rgba(248, 177, 149, 1) 90.6%);
+}
+
+.bg-translator {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(3, 235, 255, 1) 0%, rgba(152, 70, 242, 1) 100.2%);
+}
+
+.bg-zhihu {
+    background-image: radial-gradient(circle farthest-corner at 7.2% 13.6%, rgba(37, 249, 245, 1) 0%, rgba(8, 70, 218, 1) 90%);
+}
+
+.bg-redbook {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 197, 118, 1) 0%, rgba(254, 106, 103, 1) 47.7%, rgba(240, 23, 23, 1) 92.3%);
+}
+
+.bg-more {
+    background-image: linear-gradient(94.3deg, rgba(26, 33, 64, 1) 10.9%, rgba(81, 84, 115, 1) 87.1%);
+}
+
+
+
+.scale-appear {
+    animation: enlarge-appear .8s ease-out;
+}
+
+@keyframes enlarge-appear {
+    0% {
+        opacity: 0;
+        transform: scale(75%) rotate(-90deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(100%) rotate(0deg);
+    }
+}

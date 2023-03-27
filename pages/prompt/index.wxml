@@ -1,0 +1,3 @@
+<view class="prompt">
+    <prompt-item wx:for="{{promptList}}" wx:key="title" prompt="{{item}}" checked="{{checkedPrompt}}" bind:change="handleClick" />
+</view>

@@ -1,0 +1,11 @@
+<!--components/prompt-item/index.wxml-->
+<view class="role bg-{{prompt.title}}">
+    <view class="role__avatar ">
+        <image src="/assets/images/prompt-{{prompt.title}}.svg" mode="widthFix" class="scale-appear" />
+    </view>
+    <view class="role__title">{{prompt.name}}</view>
+    <view class="role__footer">
+        <view class="role__footer--description">{{prompt.description}}</view>
+        <button  bindtap="onTap" class="btn-clear role__footer--btn {{checked === prompt.title && 'checked'}}">{{checked === prompt.title ? '使用中': '选择 TA' }}</button>
+    </view>
+</view>
