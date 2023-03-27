@@ -1,7 +1,7 @@
 // 生产环境
 const env = 'production';
 // 根域名
-const baseUrl = 'https://xxx';
+const baseUrl = '';
 // AppId
 const appId = '';
 // 分享图片

@@ -1,7 +1,7 @@
 // 开发环境
 const env = 'development';
 // 根域名
-const baseUrl = 'https://xxx';
+const baseUrl = '';
 // AppId
 const appId = '';
 

@@ -18,7 +18,7 @@ export const appId = config.appId;
 /**
  * 根域名
  */
-export const baseUrl = config.baseUrl + 'xxx';
+export const baseUrl = config.baseUrl;
 /**
  * 分享图片
  */

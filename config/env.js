@@ -8,6 +8,6 @@ const configInfo = {
 
 const NODE_ENV = 'development';
 // const NODE_ENV = 'production';
-const config = configInfo['development'];
+const config = configInfo[NODE_ENV];
 
 export default config;
