@@ -1,6 +1,0 @@
-/* components/custom-more/index.wxss */
-.custom-more {
-  padding: 60rpx 0;
-  text-align: center;
-  font-size: 24rpx;
-}
