@@ -1,18 +1,140 @@
-.home{
+/* pages/chat.wxss */
+.chat {
+	background-color: #EDEDED;
 	height: 100vh;
-	background-color: #ffd001;
+	font-family: "PingFang SC", system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 }
-.home__content{
+
+.navbar__title {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.navbar__title text {
+	font-weight: bold;
+	padding-left: 16rpx;
+	padding-right: 4rpx;
+	font-size: 34rpx;
+}
+
+.content__gutter--top {
+	width: 100%;
+	height: 20rpx;
+}
+
+.content__gutter--bottom {
+	height: 1rpx;
+	width: 100%;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #F6F6F6;
+	box-sizing: border-box;
+	padding: 16rpx;
+}
+
+.footer__content {
+	display: flex;
+	gap: 10rpx;
+}
+
+.footer__content--clear {
+	width: 80rpx;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 70%;
-	border-radius: 20rpx;
 }
-.home__footer{
-	padding: 0 100rpx;
+
+.footer__safe-area {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 68rpx;
+	background-color: #F6F6F6;
 }
-.t-button-footer{
-	border: 6rpx solid #fff;
-	color: #333;
+
+.t-input-padding-class {
+	padding: 20rpx 22rpx !important;
+	border-radius: 12rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.loading {
+	text-align: center;
+	color: #999999;
+	grid-template-columns: auto;
+}
+
+
+@-webkit-keyframes fade_in_out {
+	0% {
+			opacity: 1;
+	}
+
+	50% {
+			opacity: 0.25;
+	}
+
+	100% {
+			opacity: 1;
+	}
+}
+
+@keyframes fade_in_out {
+	0% {
+			opacity: 1;
+	}
+
+	50% {
+			opacity: 0.25;
+	}
+
+	100% {
+			opacity: 1;
+	}
+}
+
+.bubble {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: space-around;
+	gap: 10rpx;
+}
+
+.bubble__circle {
+	width: 15rpx;
+	height: 15rpx;
+	border-radius: 100%;
+	background-color: #bbb;
+	-webkit-animation: fade_in_out 1.5s infinite;
+	animation: fade_in_out 1.5s infinite;
+	-webkit-animation-delay: 0.25s;
+	animation-delay: 0.25s;
+}
+
+.bubble__circle:first-of-type {
+	margin-left: 20.8333333333px;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+
+.bubble__circle:last-of-type {
+	margin-right: 20.8333333333px;
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
 }

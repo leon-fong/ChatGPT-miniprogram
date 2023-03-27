@@ -1,8 +1,39 @@
-<view class="home">
-    <view class="home__content animate__animated animate__pulse">
-        <image mode="aspectFill"  src="/assets/images/intro.png" alt="LOGO" />
-    </view>
-    <view class="home__footer">
-        <t-button theme="primary" t-class="t-button-footer animate__animated animate__fadeInUp" size="large" block bindtap="toChat">开始使用</t-button>
-    </view>
+<view class="chat">
+	<t-navbar>
+		<t-icon slot='left' name="view-list" bindtap="handleToSettings" size="50rpx" />
+		<view slot='title' class="navbar__title" bindtap="handleSwitchRole">
+			<t-avatar image="/assets/images/prompt-{{currentPrompt.title || 'default'}}.svg" size="60rpx" />
+			<text>{{currentPrompt.name}}</text>
+			<t-icon name="chevron-right" size="34rpx" />
+		</view>
+	</t-navbar>
+	<scroll-view scroll-y="{{true}}" style="height:calc(100% - {{contentHeight}}px)" scroll-with-animation="{{true}}" class="content" id="message" scroll-into-view="item-{{currentItem}}">
+		<view class="content__gutter--top"></view>
+		<message-item role="assistant">
+			<text>{{currentPrompt.description}}</text>
+		</message-item>
+		<view wx:for="{{messageList}}" wx:key="id" id="item-{{item.id}}">
+			<message-item data-index="{{index}}" role="{{item.role}}" content="{{item.content}}" finished="{{item.finished}}" bind:share="handleMessageShare" />
+		</view>
+		<message-item role="assistant" id="item-loading" wx:if="{{thinking}}">
+			<div class="bubble">
+				<div class="bubble__circle"></div>
+				<div class="bubble__circle"></div>
+				<div class="bubble__circle"></div>
+			</div>
+		</message-item>
+		<view id="item-bottom" class="content__gutter--bottom"></view>
+	</scroll-view>
+	<view class="footer" id="footer" style="bottom: {{fixedTop}}px">
+		<view class="footer__content">
+			<button wx:if="{{thinking}}" class="btn-clear footer__content--clear" bindtap="handleCancel">
+				<t-icon name="close-circle" size="50rpx" color="#C55348" />
+			</button>
+			<button wx:else class="btn-clear footer__content--clear" bindtap="handleClear">
+				<t-icon name="clear" size="50rpx" />
+			</button>
+			<t-input value="{{inputValue}}" t-class="t-input-padding-class" maxlength="{{200}}" confirm-type="send" disabled="{{loading || thinking}}" disableDefaultPadding="{{true}}" show-confirm-bar="{{false}}" adjust-position="{{false}}" clearable bind:keyboardheightchange="handleKeyboardHeightChange" bind:change="handleValueChange" bind:enter="handleSendClick" />
+		</view>
+	</view>
+	<view class="footer__safe-area"></view>
 </view>

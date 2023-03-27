@@ -1,9 +1,16 @@
 {
+	"disableScroll": true,
 	"usingComponents": {
 			"t-button": "tdesign-miniprogram/button/button",
-			"t-image": "tdesign-miniprogram/image/image"
+			"t-textarea": "tdesign-miniprogram/textarea/textarea",
+			"t-input": "tdesign-miniprogram/input/input",
+			"t-icon": "tdesign-miniprogram/icon/icon",
+			"t-tag": "tdesign-miniprogram/tag/tag",
+			"t-popup": "tdesign-miniprogram/popup/popup",
+			"message-item": "../../components/message-item",
+			"t-navbar": "tdesign-miniprogram/navbar/navbar",
+			"t-avatar": "tdesign-miniprogram/avatar/avatar",
+			"t-overlay": "tdesign-miniprogram/overlay/overlay"
 		},
-	"navigationBarTitleText": " ",
-	"navigationBarBackgroundColor": "#ffd001",
-	"disableScroll": true
+		"navigationStyle": "custom"
 }
