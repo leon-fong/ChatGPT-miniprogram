@@ -1,0 +1,55 @@
+/* components/message-item/index.wxss */
+.message {
+    padding: 20rpx;
+    font-size: 30rpx;
+}
+
+.message__wrap {
+    display: flex;
+    gap: 18rpx;
+}
+
+.message__avatar {
+    width: 84rpx;
+    height: 84rpx;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.message__box {
+    overflow-wrap: break-word;
+    color: #333;
+    overflow: hidden;
+    border-radius: 20rpx;
+    padding: 18rpx 30rpx;
+}
+
+.message__box--text {
+    vertical-align: middle;
+}
+
+.message__avatar--assistant {
+    background-color: skyblue;
+}
+
+.message__avatar--user {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 84rpx;
+    height: 84rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message__box--assistant {
+    background-color: #fff;
+}
+
+.message__box--user {
+    background-color: var(--primary-lite-color);
+}
+
+.message__layout--reverse {
+    flex-direction: row-reverse;
+}

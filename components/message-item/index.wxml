@@ -1,0 +1,9 @@
+<view class="message">
+    <view class="message__wrap {{role === 'user' && 'message__layout--reverse'}} animate__animated animate__fadeInUp">
+        <view class="message__box message__box--{{role}}">
+            <text class="message__box--text" user-select wx:if="{{content}}">{{content}}</text>
+            <slot wx:else></slot>
+        </view>
+        <view class="message__avatar "></view>
+    </view>
+</view>
