@@ -12,6 +12,10 @@ export const log = env === 'production' ? false : true;
  */
 export const version = '1.0.0';
 /**
+ * OpenAI 密钥
+ */
+export const OPEN_API_KEY = '';
+/**
  * AppId
  */
 export const appId = config.appId;
@@ -29,5 +33,6 @@ export default {
   log,
   version,
   appId,
-  baseUrl
+	baseUrl,
+	OPEN_API_KEY
 };

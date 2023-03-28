@@ -67,26 +67,9 @@
     background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
 }
 
-.bg-girlfriend {
-    background-image: linear-gradient(89.5deg, rgba(246, 114, 128, 1) 0.2%, rgba(248, 177, 149, 1) 90.6%);
-}
-
 .bg-translator {
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(3, 235, 255, 1) 0%, rgba(152, 70, 242, 1) 100.2%);
 }
-
-.bg-zhihu {
-    background-image: radial-gradient(circle farthest-corner at 7.2% 13.6%, rgba(37, 249, 245, 1) 0%, rgba(8, 70, 218, 1) 90%);
-}
-
-.bg-redbook {
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 197, 118, 1) 0%, rgba(254, 106, 103, 1) 47.7%, rgba(240, 23, 23, 1) 92.3%);
-}
-
-.bg-more {
-    background-image: linear-gradient(94.3deg, rgba(26, 33, 64, 1) 10.9%, rgba(81, 84, 115, 1) 87.1%);
-}
-
 
 
 .scale-appear {

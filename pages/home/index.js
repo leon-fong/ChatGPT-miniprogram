@@ -1,6 +1,7 @@
 // pages/chat.js
 import {
-	baseUrl
+	baseUrl,
+	OPEN_API_KEY
 } from '~/config/index';
 let requestTask = null
 let currentContent = ''
@@ -97,22 +98,24 @@ Page({
 			})
 		}
 		requestTask = wx.request({
-			url: `${baseUrl}/chat/api/proxy`,
+			url: `${baseUrl}/v1/chat/completions`,
 			data: {
+				model: "gpt-3.5-turbo",
 				messages
 			},
 			method: 'POST',
 			responseType: 'text',
 			header: {
 				'content-type': 'application/json',
+				Authorization: `Bearer ${OPEN_API_KEY}`,
 			},
 			success: async (res) => {
-				const result = res.data.data;
-				if (result.code === 200) {
+				const result = res.data?.choices[0].message.content || "";
+				if (result) {
 					const timestamp = Date.now();
 					const index = this.data.messageList.length
 					const newMessageList = `messageList[${index}]`
-					const contentCharArr = result.result.trim().split("")
+					const contentCharArr = result.trim().split("")
 					const content_key = `messageList[${index}].content`
 					const finished_key = `messageList[${index}].finished`
 					this.setData({
@@ -132,7 +135,7 @@ Page({
 					})
 					wx.showToast({
 						icon: 'none',
-						title: result.message,
+						title: '系统繁忙，请重试',
 					})
 				}
 			},
