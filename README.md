@@ -70,6 +70,14 @@ yarn install
 }
 ```
 
+## 参与贡献
+- Fork 该项目 
+- 创建一条分支 `git checkout -b feat/AmazingFeature` 
+- 提交你的更改内容 `git commit -m 'Add some AmazingFeature'` 
+- 推送到该分支 `git push origin feat/AmazingFeature`
+- 提交 PR 
+
+
 
 
 ## License
