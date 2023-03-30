@@ -1,8 +1,5 @@
 <div align="center">
-  <div>
-  <h1 align="center">ChatGPT 微信小程序</h1>
-    <img src=".github/intro.png" alt="ChatGPT Miniprogram" width="700"/>
-  </div>
+    <img src=".github/intro.png" alt="ChatGPT Miniprogram" />
 </div>
 
 
