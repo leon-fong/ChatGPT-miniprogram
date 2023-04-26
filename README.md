@@ -1,14 +1,20 @@
 <div align="center">
-    <img src=".github/intro.png" alt="ChatGPT Miniprogram" />
+    <img src=".github/intro.png" alt="ChatGPT Miniprogram" width='600' />
 </div>
+
+<p align="center"><samp>该小程序仅作为演示，如需部署请按照以下流程操作</samp></p>
+
+
+<br>
 
 
 ## 功能
-- 🤖 AI 内容保存（选择/一键复制）
 - 🧹 清空屏幕内容
+- 🎉 回复等待动画
 - ❌ 取消当前对话请求
 - 📋 丰富的 Prompt 列表 (自定义)
-- 🎉 回复等待动画
+- 🤖 AI 内容保存（选择/一键复制）
+
 
 ## 安装
 
